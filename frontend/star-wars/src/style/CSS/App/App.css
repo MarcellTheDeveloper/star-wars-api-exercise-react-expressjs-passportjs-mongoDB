@@ -1,0 +1,72 @@
+*,
+html,
+body,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../../img/starwars.png');
+  background-color: white;
+}
+
+.App {
+  padding: 0% 5%;
+  margin: 0;
+  text-align: center;
+}
+.App h1 {
+  color: white;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.user {
+  background-color: white;
+}
+
+#male,
+#female {
+  width: 40px;
+}
+
+#load-animation {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: '999';
+}
+#load-animation::after {
+  content: '';
+  width: 200px;
+  height: 200px;
+  border: 24px solid #a3a3a3;
+  border-top: 24px solid black;
+  border-radius: 100%;
+  opacity: 1;
+  will-change: transform;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
+@media only screen and (max-width: 767px) {
+  .responsive .shop_table .product-quantity {
+    display: block;
+  }
+}
